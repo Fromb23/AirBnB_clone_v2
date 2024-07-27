@@ -1,19 +1,33 @@
 #!/usr/bin/python3
-
+"""
+    Flask application
+"""
 from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
+    """
+    Return hello
+    """
     return 'Hello HBNB!'
+
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
+    """
+    Return hbnb
+    """
     return 'HBNB'
+
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_text(text):
+    """
+    Return text
+    """
     my_var = text.replace('_', ' ')
     return 'C ' + my_var
 

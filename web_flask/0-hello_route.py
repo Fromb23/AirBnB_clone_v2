@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 # Hello World
-@app.route('/', strict_slashes=False)
+@app.route('/airbnb-onepage/', strict_slashes=False)
 def hello_hbnb():
     """
     Returns a greeting.
